@@ -77,7 +77,7 @@ public class AppTest
 	        // launch browsers on job search site
 	        driver.get(baseUrl);
 	        String actualTitle = driver.getTitle();
-	        System.out.println("threads running")
+	        System.out.println("threads running");
 	        //assertion 1 
 	        Assert.assertEquals(expectedTitle, actualTitle);
 	    
