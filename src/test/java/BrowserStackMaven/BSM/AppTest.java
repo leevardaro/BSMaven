@@ -37,7 +37,7 @@ public class AppTest
 	  public static final String expectedTitle = "Job Search - Job Finder - Job Listings | Workable for Job Seekers";
 	  public static final String expJob = "Customer Engineer- San Francisco";
 	  @Test
-	  public static void main(String[] args) throws Exception {
+	  public void test(String[] args) throws Exception {
 		Thread object1 = new Thread(new IPhone());
 	    object1.start();
 	    Thread object2 = new Thread(new Chrome());
