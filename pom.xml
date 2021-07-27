@@ -40,7 +40,12 @@
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
-
+       <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>30.1.1-jre</version>
+</dependency>
  
     <dependency>
   <groupId>org.testng</groupId>
@@ -99,6 +104,8 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
+ 
+        
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
