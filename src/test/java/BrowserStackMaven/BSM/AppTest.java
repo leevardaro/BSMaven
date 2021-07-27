@@ -40,6 +40,7 @@ public class AppTest
 	  
 	  @Test
 	  public void test() throws Exception {
+		  
 		System.out.println("running test");
 		Thread object1 = new Thread(new IPhone());
 	    object1.start();
@@ -76,7 +77,7 @@ public class AppTest
 	        // launch browsers on job search site
 	        driver.get(baseUrl);
 	        String actualTitle = driver.getTitle();
-	        
+	        System.out.println("threads running")
 	        //assertion 1 
 	        Assert.assertEquals(expectedTitle, actualTitle);
 	    
