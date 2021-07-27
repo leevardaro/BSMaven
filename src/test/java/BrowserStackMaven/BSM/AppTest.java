@@ -30,14 +30,15 @@ public class AppTest
 	  //public static final String accessKey = "XNR17aPXPp6NaNZNvyD2";
 	  public String username = System.getenv("BROWSERSTACK_username");
 	  public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-	  public static String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+	  public String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
 	  public String URL = "https://" + username + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
-	  public static final String baseUrl = "https://jobs.workable.com/";
+	  public String baseUrl = "https://jobs.workable.com/";
 	  //variables for assertions
-	  public static final String expectedTitle = "Job Search - Job Finder - Job Listings | Workable for Job Seekers";
-	  public static final String expJob = "Customer Engineer- San Francisco";
+	  public String expectedTitle = "Job Search - Job Finder - Job Listings | Workable for Job Seekers";
+	  public String expJob = "Customer Engineer- San Francisco";
+	  
 	  @Test
-	  public void test(String[] args) throws Exception {
+	  public void test() throws Exception {
 		Thread object1 = new Thread(new IPhone());
 	    object1.start();
 	    Thread object2 = new Thread(new Chrome());
