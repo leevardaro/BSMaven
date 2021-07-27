@@ -39,6 +39,7 @@ public class AppTest
 	  
 	  @Test
 	  public void test() throws Exception {
+		System.out.println("running test");
 		Thread object1 = new Thread(new IPhone());
 	    object1.start();
 	    Thread object2 = new Thread(new Chrome());
