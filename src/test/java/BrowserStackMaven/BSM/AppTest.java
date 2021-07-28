@@ -42,6 +42,7 @@ public class AppTest
 	    object4.start();
 	    Thread object5 = new Thread(new Edge());
 	    object5.start();
+	    System.out.println("still running");
 	  }
 }
 
