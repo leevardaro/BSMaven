@@ -50,37 +50,30 @@
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-      <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <executions>
-        <execution>
-            <id>copy-dependencies</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-                <outputDirectory>
-                    ${project.build.directory}/libs
-                </outputDirectory>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <configuration>
-        <archive>
-            <manifest>
-                <addClasspath>true</addClasspath>
-                <classpathPrefix>libs/</classpathPrefix>
-                <mainClass>BrowserStackMaven.BSM.App</mainClass>
-            </manifest>
-        </archive>
-    </configuration>
-</plugin>
+    <plugins>
+            <plugin>
+                 <artifactId>maven-assembly-plugin</artifactId>
+                 <executions>
+                     <execution>
+                          <phase>package</phase>
+                          <goals>
+                              <goal>single</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+                  <configuration>
+                       <!-- ... -->
+                       <archive>
+                           <manifest>
+                                 <mainClass>BrowserStackMaven.BSM.App</mainClass>
+                           </manifest>
+                       </archive>
+                       <descriptorRefs>
+                           <descriptorRef>jar-with-dependencies</descriptorRef>
+                      </descriptorRefs>
+                 </configuration>
+         </plugin>
+   </plugins>
           <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
