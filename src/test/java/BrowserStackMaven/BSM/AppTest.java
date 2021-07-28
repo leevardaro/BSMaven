@@ -4,8 +4,7 @@ import org.testng.annotations.*;
 
 public class AppTest {
 
-  //public static final String username = "leevardaro_sqiF2Y";
-  //public static final String accessKey = "XNR17aPXPp6NaNZNvyD2";
+
   public String username = System.getenv("BROWSERSTACK_username");
   public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
   public static String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
@@ -20,6 +19,7 @@ public class AppTest {
   @Test
   public void Testing() throws Exception {
 	System.out.println("test started");
+	System.out.println(username + " " + accessKey);
 	Thread object1 = new Thread(new IPhone());
     object1.start();
     Thread object2 = new Thread(new Chrome());
