@@ -78,20 +78,27 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
         </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-                          <configuration>
-                  <archive>
-                    <manifest>
-
-                    <!-- give full qualified name of your main class-->
-                      <mainClass>BrowserStackMaven.BSM.App</mainClass>
-
-                    </manifest>
-                  </archive>
-                </configuration>
-        </plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.0.0</version>
+    <executions>
+       <execution>
+            <phase>package</phase>
+            <goals>
+               <goal>shade</goal>
+            </goals>
+            <configuration>
+                 <transformers>
+                    <transformer 
+implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>BrowserStacMaven.BSM.App</mainClass>
+                    </transformer>
+                 </transformers>
+             </configuration>
+       </execution>
+    </executions>
+</plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
