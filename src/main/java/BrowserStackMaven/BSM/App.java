@@ -28,6 +28,8 @@ class IPhone implements Runnable {
 		capsHashtable.put("os_version", "14");
 		capsHashtable.put("build", App.buildName);
 		capsHashtable.put("name", "IPhone");
+		capsHashtable.put("browserstack.local", App.browserstackLocal);
+		capsHashtable.put("browserstack.localIdentifier", App.browserstackLocalIdentifier);
 		App r1 = new App();
 		r1.executeTest(capsHashtable);
   }
@@ -41,6 +43,8 @@ class Chrome implements Runnable {
 		capsHashtable.put("os_version", "10");
 		capsHashtable.put("build", App.buildName);
 		capsHashtable.put("name", "Chrome");
+		capsHashtable.put("browserstack.local", App.browserstackLocal);
+		capsHashtable.put("browserstack.localIdentifier", App.browserstackLocalIdentifier);
 		App r1 = new App();
     r1.executeTest(capsHashtable);
   }
@@ -54,6 +58,8 @@ class Safari implements Runnable {
 		capsHashtable.put("os_version", "Big Sur");
 		capsHashtable.put("build", App.buildName);
 		capsHashtable.put("name", "Safari");
+		capsHashtable.put("browserstack.local", App.browserstackLocal);
+		capsHashtable.put("browserstack.localIdentifier", App.browserstackLocalIdentifier);
 		App r1 = new App();
     r1.executeTest(capsHashtable);
   }
@@ -67,6 +73,8 @@ class FireFox implements Runnable {
 		capsHashtable.put("os_version", "7");
 		capsHashtable.put("build", App.buildName);
 		capsHashtable.put("name", "FireFox");
+		capsHashtable.put("browserstack.local", App.browserstackLocal);
+		capsHashtable.put("browserstack.localIdentifier", App.browserstackLocalIdentifier);
 		App r1 = new App();
     r1.executeTest(capsHashtable);
   }
@@ -80,6 +88,8 @@ class Edge implements Runnable {
 		capsHashtable.put("os_version", "10");
 		capsHashtable.put("build", App.buildName);
 		capsHashtable.put("name", "Edge");
+		capsHashtable.put("browserstack.local", App.browserstackLocal);
+		capsHashtable.put("browserstack.localIdentifier", App.browserstackLocalIdentifier);
 		App r1 = new App();
     r1.executeTest(capsHashtable);
   }
@@ -91,6 +101,8 @@ public class App {
   public String username = System.getenv("BROWSERSTACK_username");
   public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
   public static String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+  public static String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
+  public static String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
   public String URL = "https://" + username + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
   public static final String baseUrl = "https://jobs.workable.com/";
   //variables for assertions

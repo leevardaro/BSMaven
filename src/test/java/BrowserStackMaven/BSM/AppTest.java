@@ -27,16 +27,6 @@ import org.testng.annotations.Test;
 public class AppTest 
 {
 
-	  //public static final String username = "leevardaro_sqiF2Y";
-	  //public static final String accessKey = "XNR17aPXPp6NaNZNvyD2";
-	  public String username = System.getenv("BROWSERSTACK_username");
-	  public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-	  public String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
-	  public String URL = "https://" + username + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
-	  public String baseUrl = "https://jobs.workable.com/";
-	  //variables for assertions
-	  public String expectedTitle = "Job Search - Job Finder - Job Listings | Workable for Job Seekers";
-	  public String expJob = "Customer Engineer- San Francisco";
 	  
 	  @Test
 	  public void test() throws Exception {
