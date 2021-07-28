@@ -17,7 +17,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
+
 
 
 
@@ -110,7 +110,7 @@ public class App {
   public static final String expectedTitle = "Job Search - Job Finder - Job Listings | Workable for Job Seekers";
   public static final String expJob = "Customer Engineer- San Francisco";
   
-  @Test
+
   public void Testing() throws Exception {
 	Thread object1 = new Thread(new IPhone());
     object1.start();
