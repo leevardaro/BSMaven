@@ -21,7 +21,7 @@ public class AppTest {
 	System.out.println("test started");
 	System.out.println(username + " " + accessKey);
 	Thread object1 = new Thread(new IPhone());
-    object1.start();
+	object1.start();
     Thread object2 = new Thread(new Chrome());
     object2.start();
     Thread object3 = new Thread(new Safari());
