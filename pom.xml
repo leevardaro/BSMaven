@@ -83,7 +83,7 @@
       <archive>
         <manifest>
           <addClasspath>true</addClasspath>
-          <mainClass>BrowserStackMaven.BSM.App</mainClass>
+          <mainClass>/BSM/src/main/java/BrowserStackMaven/BSM/App.java</mainClass>
         </manifest>
       </archive>
       <descriptorRefs>
