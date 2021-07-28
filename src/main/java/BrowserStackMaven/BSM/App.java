@@ -111,7 +111,7 @@ public class App {
   public static final String expJob = "Customer Engineer- San Francisco";
   
 
-  public void Testing() throws Exception {
+  public static void main(String[] args) throws Exception {
 	Thread object1 = new Thread(new IPhone());
     object1.start();
     Thread object2 = new Thread(new Chrome());
