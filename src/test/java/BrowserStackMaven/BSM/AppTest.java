@@ -20,8 +20,12 @@ public class AppTest {
   public void Testing() throws Exception {
 	System.out.println("test started");
 	System.out.println(username + " " + accessKey);
-	Thread object1 = new Thread(new IPhone());
+	try {Thread object1 = new Thread(new IPhone());
     object1.start();
+	}
+	catch (Exception e) {
+		e.printStackTrace();
+	}
     Thread object2 = new Thread(new Chrome());
     object2.start();
     Thread object3 = new Thread(new Safari());
